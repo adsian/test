@@ -1,10 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"bytes"
+	"fmt"
+)
 
-func main1() {
-	fmt.Println("start...")
-	request := NewRequest()
-	cli := CLI{request}
-	cli.Run()
+func main() {
+	a := "hello"
+	b := "world"
+
+	c := bytes.Compare([]byte(a), []byte(b))
+	fmt.Println(c)
 }
